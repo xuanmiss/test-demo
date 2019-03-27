@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:file:~/IdeaProjects/fluxdemo/.h2/testdb;DB_CLOSE_DELAY=-1
+    username: miss
+    password: 123456
+#    schema: classpath:db/schema.sql #初始化数据库
+#    data: classpath:db/data.sql     #初始化数据
+    platform: h2
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2

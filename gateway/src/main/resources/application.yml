@@ -1,0 +1,33 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: gateway-server
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:file:~/IdeaProjects/fluxdemo/.h2/testdb;DB_CLOSE_DELAY=-1
+    username: miss
+    password: 123456
+#    schema: classpath:db/schema.sql #初始化数据库
+#    data: classpath:db/data.sql     #初始化数据
+    platform: h2
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  profiles:
+    active: dev
+mybatis:
+  type-aliases-package: com.miss.gateway.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

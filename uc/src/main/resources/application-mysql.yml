@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://portal.definesys.com:30002/elastic_job?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: definesys
+    driver-class-name: com.mysql.jdbc.Driver

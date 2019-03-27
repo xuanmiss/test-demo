@@ -1,0 +1,29 @@
+server:
+  port: 9012
+mybatis:
+#  type-aliases-package: com.miss.uc.entity
+#  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+#  cloud:
+#    config:
+#      name: uc  #文件前缀名称
+#      profile: dev
+#      uri: http://127.0.0.1:9100
+
+#  boot:
+#    admin:
+#      client:
+#        url: "http://localhost:9015"
+  profiles:
+    active: h2
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  file: uc/uc.log

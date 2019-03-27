@@ -1,0 +1,13 @@
+
+example:
+  service:
+    enabled: true
+    config: abc-des-dde,SSS-DRS-RE,SDR-SDFR-XXX
+server:
+  port: 9013
+miss:
+  log:
+    exclude: log
+#miss:
+#  log:
+#    exclude: test,log

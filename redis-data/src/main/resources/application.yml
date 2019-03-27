@@ -1,0 +1,26 @@
+server:
+  port: 9013
+mybatis:
+  type-aliases-package: com.miss.redisdata.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  profiles:
+    active: h2
+  redis:
+    host: portal.definesys.com # definesys服务器
+    password:
+    port: 31020
+    database: 2
+    timeout: 10000 #连接超时时间 ms
+    jedis:
+      pool:
+        max-active: 100 # 连接池最大连接数
+        max-idle: 8 # 最大空闲连接
+        min-idle: 0 # 最小空闲连接
+        max-wait: -1 #连接池最
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss

@@ -1,0 +1,29 @@
+spring:
+  devtools:
+    restart:
+      enabled: false
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      bootstrap-servers: 10.211.55.8:30092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    consumer:
+      bootstrap-servers: 10.211.55.8:30092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.miss.kafkademo.entity
+
+    bootstrap-servers: 10.211.55.8:30092
+#      group-id: group_id
+
+
+server:
+  port: 9012
+logging:
+  file: kafkalogs/kafka.log

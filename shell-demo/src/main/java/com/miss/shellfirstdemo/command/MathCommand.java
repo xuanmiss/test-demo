@@ -6,6 +6,7 @@ import org.springframework.shell.standard.ShellMethod;
 import sun.misc.BASE64Encoder;
 
 import java.security.MessageDigest;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -65,3 +65,4 @@ fabric.properties
 /.h2/
 *.iml
 *.log
+/kafkalogs/

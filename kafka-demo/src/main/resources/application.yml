@@ -18,6 +18,7 @@ spring:
           json:
             trusted:
               packages: com.miss.kafkademo.entity
+      auto-offset-reset: earliest
 
     bootstrap-servers: 10.211.55.8:30092
 #      group-id: group_id

@@ -33,10 +33,9 @@ public class RouteController {
         return routeService.getRoutes();
 
     }
-//
 //    @GetMapping("/refresh")
 //    public String refresh(){
-//        ContextUtil.getBean("RouteLocator").getClass().
+//        ContextUtil.getBean("customRouteLocator").getClass().
 //    }
 
 

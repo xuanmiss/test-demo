@@ -1,6 +1,6 @@
 FROM java:8
 VOLUME /tmp
-ADD target/hello-1.0.jar /app.jar
+ADD target/rest-demo-1.0.jar /app.jar
 ENV TZ Asia/Shanghai
 RUN bash -c 'touch /app.jar'
 EXPOSE 9012

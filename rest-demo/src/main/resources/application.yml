@@ -1,0 +1,12 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: rest-demo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.211.55.8:30060/eureka/
+  instance:
+    instance-id: rest-demo
+    prefer-ip-address: true

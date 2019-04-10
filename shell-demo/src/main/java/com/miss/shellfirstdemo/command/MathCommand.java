@@ -57,5 +57,12 @@ public class MathCommand {
         return res;
     }
 
+    @ShellMethod(value = "map str",key = {"mapstr"})
+    public String mapStr(String key,String value) {
+        Map map = new HashMap();
+        map.put(key,value);
+        return map.toString();
+    }
+
 
 }

@@ -1,5 +1,5 @@
 server:
-  port: 9100
+  port: 9012
 eureka:
   server:
 #    enable-self-preservation: false
@@ -10,7 +10,23 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:9100/eureka/
+      defaultZone: http://10.211.55.8:30060/eureka/
 spring:
   application:
     name: eureka-server
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 1511836114@qq.com
+    password: gpanozdmuvaxfgbf
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+mail:
+  from: ${spring.mail.username}
+  to: xuanmine@gmail.com

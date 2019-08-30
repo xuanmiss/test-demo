@@ -24,6 +24,6 @@ public class FeignTestController {
 
     @GetMapping("test")
     public String foo() {
-        return restClient.foo();
+        return restClient.foo("test");
     }
 }

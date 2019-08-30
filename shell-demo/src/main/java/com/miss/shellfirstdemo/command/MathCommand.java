@@ -58,11 +58,15 @@ public class MathCommand {
     }
 
     @ShellMethod(value = "map str",key = {"mapstr"})
-    public String mapStr(String key,String value) {
+    public String mapStr() {
         Map map = new HashMap();
-        map.put(key,value);
-        return map.toString();
+       if(map.isEmpty()){
+           return "空的map";
+       }else {
+           return map.toString();
+       }
     }
+
 
 
 }

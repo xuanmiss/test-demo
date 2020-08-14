@@ -37,7 +37,7 @@ public class UcApplicationTests {
     public void testAuthRestTemplate() {
         String url = "http://host";
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization","Bearer "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlfdmVyc2lvbiI6IjAwMSIsInVzZXJfcmVwb3NpdG9yeSI6IlVDMDAwMSIsInVzZXJfbmFtZSI6ImJ4MSIsInNjb3BlIjpbIlNDT1BFX09ORSIsIlNDT1BFX1RXTyJdLCJleHAiOjE1NTM1MDcwMzgsInByb2RfY29kZSI6Ik1TUCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiM2YzYTk2NDQtZWY2Yy00ZmVmLTg5ZWItOGJlZWQxZTliZTRlIiwiY2xpZW50X2lkIjoiTVNQLmRjcGMiLCJ0ZW5hbnRfY29kZSI6ImRjcGMifQ.-QJ0LZXLm_86Z-Kx_ZOC0MlFAQxM5eEfsryyNTT8V1U");
+        headers.add("Authorization","Bearer "+"a");
         HttpEntity<?> httpEntity = new HttpEntity<>(headers);
         Map response = restTemplate.postForObject(url,httpEntity,Map.class);
         System.out.println(response.toString());

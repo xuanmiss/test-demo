@@ -35,7 +35,7 @@ public class UcApplicationTests {
 
     @Test
     public void testAuthRestTemplate() {
-        String url = "http://ripplescloud.dev.crpharm.com/apis/mgt/security/getLoginData";
+        String url = "http://host";
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization","Bearer "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlfdmVyc2lvbiI6IjAwMSIsInVzZXJfcmVwb3NpdG9yeSI6IlVDMDAwMSIsInVzZXJfbmFtZSI6ImJ4MSIsInNjb3BlIjpbIlNDT1BFX09ORSIsIlNDT1BFX1RXTyJdLCJleHAiOjE1NTM1MDcwMzgsInByb2RfY29kZSI6Ik1TUCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiM2YzYTk2NDQtZWY2Yy00ZmVmLTg5ZWItOGJlZWQxZTliZTRlIiwiY2xpZW50X2lkIjoiTVNQLmRjcGMiLCJ0ZW5hbnRfY29kZSI6ImRjcGMifQ.-QJ0LZXLm_86Z-Kx_ZOC0MlFAQxM5eEfsryyNTT8V1U");
         HttpEntity<?> httpEntity = new HttpEntity<>(headers);
